@@ -1,3 +1,28 @@
+## typescript 化
+
+### 依存関係インストール
+
+```bash
+yarn add --dev typescript @types/node && yarn tsc --init && yarn add --dev ts-node && yarn add --dev @types/express && yarn add --dev @types/cookie-parser @types/morgan
+```
+
+### package.json 修正
+
+```json
+"scripts": {
+"start": "ts-node routes/index.ts"
+},
+```
+
+### ファイル拡張子変更
+
+- js -> ts で拡張子変更
+- ともなって内容も変更。
+
+### 参考
+
+- [zenn](https://zenn.dev/sungvalley/articles/4de76c12826709)
+
 ## コミットメッセージ
 
 - build: ビルドシステムや外部依存関係の変更
