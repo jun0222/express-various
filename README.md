@@ -1,3 +1,53 @@
+## crud 用のクエリ
+
+```gql
+mutation {
+  createUser(name: "John Doe", email: "john@example.com") {
+    id
+    name
+    email
+  }
+}
+```
+
+````gql
+{
+  user(id: 1) {
+    id
+    name
+    email
+  }
+}
+```
+
+```gql
+{
+  users {
+    id
+    name
+    email
+  }
+}
+````
+
+```gql
+mutation {
+  updateUser(id: 1, name: "Jane Doe", email: "jane@example.com") {
+    id
+    name
+    email
+  }
+}
+```
+
+```gql
+mutation {
+  deleteUser(id: 1) {
+    id
+  }
+}
+```
+
 ## GraphQL と sqlite3 導入
 
 ```bash
