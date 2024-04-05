@@ -1,11 +1,20 @@
 import express from "express";
-const app: express.Express = express();
-const port = 3000;
+import { graphqlHTTP } from "express-graphql";
+import schema from "../schema";
+import resolvers from "../resolvers";
 
-app.get("/", (_req, res) => {
-  res.send("Hello World!");
-});
+const app = express();
+const port = 4000;
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    rootValue: resolvers,
+    graphiql: true,
+  })
+);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server running at http://localhost:${port}/graphql`);
 });

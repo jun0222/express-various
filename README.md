@@ -1,3 +1,27 @@
+## GraphQL と sqlite3 導入
+
+```bash
+yarn add express graphql express-graphql sqlite3
+yarn add -D typescript ts-node @types/node @types/express @types/graphql @types/sqlite3
+```
+
+- db.ts 作成
+- schema.ts 作成
+- resolvers.ts 作成
+- routes/index.ts 修正
+
+yarn dev してからクエリを叩いて動作確認
+
+```gql
+{
+  user(id: 1) {
+    id
+    name
+    email
+  }
+}
+```
+
 ## typescript 化
 
 ### 依存関係インストール
