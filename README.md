@@ -1,3 +1,13 @@
+## test
+
+```bash
+yarn add jest supertest @types/jest @types/supertest -D
+yarn add --dev ts-jest @types/jest
+```
+
+- app.ts に graphql の設定を追加
+- テストファイル追加
+
 ## crud 用のクエリ
 
 ```gql
